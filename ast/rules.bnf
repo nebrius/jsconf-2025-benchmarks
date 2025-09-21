@@ -1,0 +1,32 @@
+Program ::= StatementBlock
+
+StatementBlock ::= Statement ';' StatementBlock | Statement
+
+Statement ::=
+| 'var' <identifier>
+| <identifier> '=' Expression
+| 'if' '(' Condition ')' '{' StatementBlock '}' { 'else' '{' StatementBlock '}' }
+| 'while' '(' Condition ')' '{' StatementBlock '}'
+
+Condition ::=
+  Expression '>' Expression |
+  Expression '<' Expression |
+  Expression '=' Expression
+
+Expression ::=
+  <literal> '+' Expression |
+  <identifier> '+' Expression |
+  <literal> '-' Expression |
+  <identifier> '-' Expression |
+  <literal> '*' Expression |
+  <identifier> '*' Expression |
+  <literal> '/' Expression |
+  <identifier> '/' Expression |
+  <literal>
+  <identifier>
+
+
+# Keywords: var, if, else, while
+# Operators: +, -, *, /, >, <, =
+# Separators: ;, {, }, (, )
+# <literal> types: integers, "strings"
