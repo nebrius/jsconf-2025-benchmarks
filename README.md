@@ -9,6 +9,7 @@ Here are the versions of the build tools I used to run these programs.
 - Go 1.25.1
 - Rust 1.89.0
 - Clang: 17.0.0
+  - Note: vanilla GCC is noticeably slower
 
 If you want to run the benchmarks yourself, you should use the same versions of
 these tools. Most importantly, make sure your Node.js major version is the same,
