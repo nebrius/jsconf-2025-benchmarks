@@ -90,7 +90,7 @@ async function runBenchmarks() {
         const result = spawnSync(command.command, command.args, {
           env: { ...process.env, ...command.env },
           cwd: command.cwd,
-          stdio: ["inherit", "pipe", "inherit"],
+          stdio: "inherit",
         });
 
         if (result.error) {
